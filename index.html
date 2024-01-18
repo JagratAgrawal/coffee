@@ -1,0 +1,313 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(165, 42, 42, 0.2);
+      }
+      nav {
+        background: url("https://i.pinimg.com/736x/e1/c2/3a/e1c23ac34847740f672717c89a62ae37.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+        width: 100%;
+        box-shadow: 0px 0px 8px black;
+        margin-bottom: 40px;
+      }
+      nav > input {
+        position: sticky;
+        top: 60px;
+        left: 15%;
+        width: 70%;
+        height: 60px;
+        border-radius:10px;
+        background-color: rgb(99, 18, 18,1);
+        color: white;
+        border: none;
+        padding: 10px;
+      }
+      input:focus{
+        outline: none;
+        background-color: rgb(99, 18, 18,0.9);
+      }
+      .coffee_menu {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .coffee_menu > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: rgba(0, 0, 0, 0.8);
+      }
+      .img {
+        height: 150px;
+        width: 150px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        box-shadow: 0px 8px 8px black;
+      }
+      img:hover {
+        box-shadow: 0px 18px 18px black;
+        height: 152px;
+        width: 152px;
+      }
+      .coffee_menu > div > h4 {
+        margin-block: 15px;
+      }
+      .des {
+        width: 90%;
+        margin: auto;
+        margin-block: 50px;
+        background-color: rgb(165, 42, 42, 0.3);
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 8px brown;
+      }
+      .des>p,.des>ol{
+        line-height: 20px;
+        color: brown;
+      }
+      ol>li{
+        padding: 5px;
+      }
+    </style>
+  <style data-jss="" data-meta="MuiDialog">
+@media print {
+  .MuiDialog-root {
+    position: absolute !important;
+  }
+}
+.MuiDialog-scrollPaper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.MuiDialog-scrollBody {
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+}
+.MuiDialog-scrollBody:after {
+  width: 0;
+  height: 100%;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+}
+.MuiDialog-container {
+  height: 100%;
+  outline: 0;
+}
+@media print {
+  .MuiDialog-container {
+    height: auto;
+  }
+}
+.MuiDialog-paper {
+  margin: 32px;
+  position: relative;
+  overflow-y: auto;
+}
+@media print {
+  .MuiDialog-paper {
+    box-shadow: none;
+    overflow-y: visible;
+  }
+}
+.MuiDialog-paperScrollPaper {
+  display: flex;
+  max-height: calc(100% - 64px);
+  flex-direction: column;
+}
+.MuiDialog-paperScrollBody {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+.MuiDialog-paperWidthFalse {
+  max-width: calc(100% - 64px);
+}
+.MuiDialog-paperWidthXs {
+  max-width: 444px;
+}
+@media (max-width:507.95px) {
+  .MuiDialog-paperWidthXs.MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.MuiDialog-paperWidthSm {
+  max-width: 600px;
+}
+@media (max-width:663.95px) {
+  .MuiDialog-paperWidthSm.MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.MuiDialog-paperWidthMd {
+  max-width: 960px;
+}
+@media (max-width:1023.95px) {
+  .MuiDialog-paperWidthMd.MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.MuiDialog-paperWidthLg {
+  max-width: 1280px;
+}
+@media (max-width:1343.95px) {
+  .MuiDialog-paperWidthLg.MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.MuiDialog-paperWidthXl {
+  max-width: 1920px;
+}
+@media (max-width:1983.95px) {
+  .MuiDialog-paperWidthXl.MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.MuiDialog-paperFullWidth {
+  width: calc(100% - 64px);
+}
+.MuiDialog-paperFullScreen {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  max-width: 100%;
+  max-height: none;
+  border-radius: 0;
+}
+.MuiDialog-paperFullScreen.MuiDialog-paperScrollBody {
+  margin: 0;
+  max-width: 100%;
+}
+</style><style type="text/css">#_copy{align-items:center;background:#4494d5;border-radius:3px;color:#fff;cursor:pointer;display:flex;font-size:13px;height:30px;justify-content:center;position:absolute;width:60px;z-index:1000}#select-tooltip,#sfModal,.modal-backdrop,div[id^=reader-helper]{display:none!important}.modal-open{overflow:auto!important}._sf_adjust_body{padding-right:0!important}.super_copy_btns_div{position:fixed;width:154px;left:10px;top:45%;background:#e7f1ff;border:2px solid #4595d5;font-weight:600;border-radius:2px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;z-index:5000}.super_copy_btns_logo{width:100%;background:#4595d5;text-align:center;font-size:12px;color:#e7f1ff;line-height:30px;height:30px}.super_copy_btns_btn{display:block;width:128px;height:28px;background:#7f5711;border-radius:4px;color:#fff;font-size:12px;border:0;outline:0;margin:8px auto;font-weight:700;cursor:pointer;opacity:.9}.super_copy_btns_btn:hover{opacity:.8}.super_copy_btns_btn:active{opacity:1}</style></head>
+  <body _c_t_j1="1">
+    <nav>
+      <input type="text" value="Search">
+    </nav>
+
+    <main>
+      <section class="coffee_menu">
+        <div>
+          <div class="img">
+            <img src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcTiCxXcyNxBKgWT2_t-TQQ_DTFFEnfQz9p1OT5WTg4vaJ4eUE_OPh6Vvd4qxWJop6-w" alt="Cappuccino">
+          </div>
+          <h4>Cappuccino</h4>
+        </div>
+        <div>
+          <div class="img">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg" alt="Espresso">
+          </div>
+          <h4>Espresso</h4>
+        </div>
+        <div>
+          <div class="img">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQJppQpvbjiWse0QeBv0e2EstBXGOP1K80eAv9S0qPks2CDkhhc" alt="Latte">
+          </div>
+          <h4>Latte</h4>
+        </div>
+        <div>
+          <div class="img">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Flat_white_coffee_with_pretty_feather_pattern.jpg" alt="Flat White">
+          </div>
+          <h4>Flat White</h4>
+        </div>
+      </section>
+      <section class="des">
+        <h1 style="color: brown;">Coffee-House</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          error recusandae iure illum nihil non reiciendis laborum et
+          consequatur fugit. Lorem ipsum dolor, sit amet consectetur adipisicing
+          elit. Ex illum earum maiores necessitatibus vero officia expedita, ad
+          odio omnis distinctio facere perferendis quas repellat alias quos
+          incidunt dolor beatae quia. Numquam aliquam molestias nostrum sequi.
+          Doloremque libero ex voluptas natus, corporis provident esse,
+          obcaecati tenetur inventore, odit labore pariatur officia corrupti
+          suscipit debitis sequi quod nihil? Adipisci vel laborum voluptate
+          iusto optio commodi quibusdam repudiandae accusantium molestiae
+          officiis reprehenderit nulla nostrum dolore corporis libero, quaerat
+          accusamus cupiditate ex quisquam enim eum id cum. Neque, eaque?
+          Accusantium quae magnam laudantium necessitatibus, neque praesentium
+          ullam voluptates fugit unde, aliquam dignissimos? Asperiores,
+          blanditiis.
+        </p>
+        <br>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          error recusandae iure illum nihil non reiciendis laborum et
+          consequatur fugit. Lorem ipsum, dolor sit amet consectetur adipisicing
+          elit. Consequatur numquam fugiat quibusdam voluptates inventore,
+          corrupti assumenda pariatur, maiores est eius sunt ipsa et quasi
+          labore voluptatem odit adipisci molestiae esse, dicta illum? Natus,
+          tempora doloribus! Ab molestias quidem alias, assumenda perferendis
+          mollitia aliquam dolor totam voluptatem? Beatae nisi fugit cupiditate.
+        </p>
+         <br>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            error recusandae iure illum nihil non reiciendis laborum et
+            consequatur fugit. Lorem ipsum dolor, sit amet consectetur adipisicing
+            elit. Ex illum earum maiores necessitatibus vero officia expedita, ad
+            odio omnis distinctio facere perferendis quas repellat alias quos
+            incidunt dolor beatae quia. Numquam aliquam molestias nostrum sequi.
+            Doloremque libero ex voluptas natus, corporis provident esse,
+            obcaecati tenetur inventore, odit labore pariatur officia corrupti
+            suscipit debitis sequi quod nihil? Adipisci vel laborum voluptate
+            iusto optio commodi quibusdam repudiandae accusantium molestiae
+            officiis reprehenderit nulla nostrum dolore corporis libero, quaerat
+            accusamus cupiditate ex quisquam enim eum id cum. Neque, eaque?
+            Accusantium quae magnam laudantium necessitatibus, neque praesentium
+            ullam voluptates fugit unde, aliquam dignissimos? Asperiores,
+            blanditiis.
+          </p>
+      </section>
+      <section class="des">
+        <h1 style="color: brown;">Coffee list</h1>
+        <ol>
+            <li>Coffee-1</li>
+            <li>Coffee-2</li>
+            <li>Coffee-3</li>
+            <li>Coffee-4</li>
+            <li>Coffee-5</li>
+            <li>Coffee-6</li>
+        </ol>
+           <br>
+          <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+              error recusandae iure illum nihil non reiciendis laborum et
+              consequatur fugit. Lorem ipsum dolor, sit amet consectetur adipisicing
+              elit. Ex illum earum maiores necessitatibus vero officia expedita, ad
+              odio omnis distinctio facere perferendis quas repellat alias quos
+              incidunt dolor beatae quia. Numquam aliquam molestias nostrum sequi.
+              Doloremque libero ex voluptas natus, corporis provident esse,
+              obcaecati tenetur inventore, odit labore pariatur officia corrupti
+              suscipit debitis sequi quod nihil? Adipisci vel laborum voluptate
+              iusto optio commodi quibusdam repudiandae accusantium molestiae
+              officiis reprehenderit nulla nostrum dolore corporis libero, quaerat
+              accusamus cupiditate ex quisquam enim eum id cum. Neque, eaque?
+              Accusantium quae magnam laudantium necessitatibus, neque praesentium
+              ullam voluptates fugit unde, aliquam dignissimos? Asperiores,
+              blanditiis.
+            </p>
+      </section>
+    </main>
+  
+
+<div id="93A80BFC-977D-2AB7-189E-6A19535C07D4"></div></body></html>
